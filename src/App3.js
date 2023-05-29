@@ -19,19 +19,25 @@ const Data = [
         name: 'venusaur',
         ability: 'overgrow',
         type: 'fire',
-        url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4jRiAgeBVxPbXPjsUJY6LxtNn-wwvuKN0GA&usqp=CAU'
+        url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSaSIohpWK5X9MrjSRm2uSRRzZZJum0yE60xA&usqp=CAU'
     },
     {
         name: 'charizard',
         ability: ['torrent', 'torrent'],
         type: ['water'],
-        url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4jRiAgeBVxPbXPjsUJY6LxtNn-wwvuKN0GA&usqp=CAU'
+        url: 'https://staticg.sportskeeda.com/editor/2021/05/b5967-16219277162645-800.jpg'
     },
     {
         name: 'pidgeotto',
         ability: ['big-pecks', 'tangled-feet','keen-eye'],
         type: ['normal', 'flying'],
-        url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4jRiAgeBVxPbXPjsUJY6LxtNn-wwvuKN0GA&usqp=CAU'
+        url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCkiv7a2JNOsHwnMJOrelutGdLNOi4wJpKJXLCu8O-8VOo1URkL9i5UknmAmUBC8-Yzjs&usqp=CAU'
+    },
+    {
+        name:'pikachu',
+        ability:['electric','thundershot'],
+        type:['ultimate'],
+        url:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSaWG9Pg__rJnmCtJgwQYJDlVBmi-vEpNu4qQ&usqp=CAU'
     }
 ]
 
@@ -78,17 +84,20 @@ const styles = StyleSheet.create({
         flex: 1,
         alignItems: 'center'
     },
+    shadowProp: {  
+        shadowOffset: {width: -2, height: 4},  
+        shadowColor: '#171717',  
+        shadowOpacity: 0.2,  
+        shadowRadius: 3,  
+      },  
     box: {
         width: 350,
         height: 150,
         borderRadius: 12,
-        shadowColor: 'black',
-        shadowOffset: {
-            width: 0,
-            height: 3
-        },
-        shadowRadius: 5,
-        shadowOpacity: 1.0,
+        shadowOffset: {width: -2, height: 4},  
+        shadowColor: 'black',  
+        shadowOpacity: 0.2,  
+        shadowRadius: 3, 
         backgroundColor: 'pink',
         margin: 20,
         flexDirection:'row'
@@ -119,8 +128,6 @@ const styles = StyleSheet.create({
         fontWeight:500,
         color:'black'
     }
-
-
 
 });
 
