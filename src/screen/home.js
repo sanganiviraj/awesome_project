@@ -1,5 +1,5 @@
 import React from "react";
-import { Text, Image, ImageBackground, StyleSheet, Vibration, View, FlatList, } from "react-native";
+import { Text, Image, ImageBackground, StyleSheet, Vibration, View, FlatList, Pressable, } from "react-native";
 
 const Data = [
 
@@ -41,7 +41,7 @@ const Data = [
     }
 ]
 
-const Home = () => {
+const Home = (props) => {
     return (
         <View style={styles.screen}>
             <FlatList
@@ -51,7 +51,17 @@ const Home = () => {
                     const types = item.type.toString();
                     return (
 
-                        <View style={styles.box}>
+                        <Pressable style={styles.box}  
+                        onPress={() =>  {
+                            props.navigation.push('Detail' , {
+                                pokedata : item,
+                            })
+                        }}
+                        
+                    
+                        >
+
+
                              <Image style={styles.bg} source={{ uri: item.url }}>
                             </Image>
                             
@@ -77,7 +87,7 @@ const Home = () => {
 
                             </View>
 
-                        </View>
+                        </Pressable>
                     )
                 }}
             />
@@ -117,7 +127,6 @@ const styles = StyleSheet.create({
         margin: 20,
         alignSelf: 'center',
         borderRadius: 12,
-        elevation:5
     },
     title: {
         fontSize: 20,

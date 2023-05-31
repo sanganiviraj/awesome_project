@@ -83,8 +83,8 @@ const Home2 = () => {
                             </Text>
                         </Text>
 
-
-                    </View>)
+                    </View>
+                    )
                 }
 
                 }
